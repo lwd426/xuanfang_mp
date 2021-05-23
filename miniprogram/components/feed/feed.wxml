@@ -1,0 +1,13 @@
+<!--components/feed.wxml-->
+<view class="feed">
+  <image mode="aspectFill" class="pic" src="{{pic}}"/>
+  <view class="content">
+    <view class="title">{{title}}</view>
+    <view class="desc_content">{{desc}}</view>
+    <view class="desc" catchtap="{{momentRead}}">
+      <text class="time">{{time}}</text>
+      <text class="author">{{author}}</text>
+      <text class="feed_opt" data-feed-id="{{feed_id}}" bindtap="{{momentRead}}">+待看</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "酒品首页",
+  "usingComponents": {
+    "mp-tabs": "@miniprogram-component-plus/tabs"
+  }
+}
