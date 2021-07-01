@@ -1,13 +1,28 @@
 <!--components/feed.wxml-->
 <view class="feed">
-  <image mode="aspectFill" class="pic" src="{{pic}}"/>
+  <image mode="scaleToFill" class="pic" src="http://pic.xuanfang.club/nowine.png"/>
   <view class="content">
-    <view class="title">{{title}}</view>
-    <view class="desc_content">{{desc}}</view>
+    <view class="title">{{name}}</view>
+    <view class="desc_content">{{title}}</view>
     <view class="desc" catchtap="{{momentRead}}">
-      <text class="time">{{time}}</text>
-      <text class="author">{{author}}</text>
-      <text class="feed_opt" data-feed-id="{{feed_id}}" bindtap="{{momentRead}}">+待看</text>
+      <view style="display: inline-block;">￥
+        <text class="author">{{current_price}}</text>
+      </view>
+      <text class="time">原价：￥{{origin_price}}</text>
+    </view>
+    <view class="opt">
+      <button class=" button" type="default" role="button" plain="true">加仓</button>
+      <button class=" button" type="default" role="button" bindtap="go2detail" plain="true">详情</button>
     </view>
   </view>
 </view>
+<!-- 
+wine_id="{{item.id}}"
+    name="{{item.name}}"
+    title="{{item.title}}"
+    pics="{{item.pics}}"
+    origin_price="{{item.origin_price}}"
+    current_price="{{item.current_price}}"
+    descrition="{{item.descrition}}"
+    volume="{{item.volume}}"
+    count -->

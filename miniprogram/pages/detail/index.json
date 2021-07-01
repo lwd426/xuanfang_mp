@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "我的酒窖",
+  "navigationBarTitleText": "酒品详情",
   "usingComponents": {
     "avatar": "/components/avatar/avatar",
     "celler": "/components/celler/celler"

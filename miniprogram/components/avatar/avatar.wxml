@@ -1,0 +1,12 @@
+<!--components/avatar.wxml-->
+<view class="avatar-wrapper">
+  <view class="userinfo-avatar" bindtap="bindViewTap">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data type="userNickName" class="user-name"></open-data>
+  <view class="vip-logo-warpper">
+    <image class="vip-logo" src="http://pic.xuanfang.club/viplog.png"></image>
+    <text class="vip-text">高级会员</text>
+  </view>
+  
+</view>

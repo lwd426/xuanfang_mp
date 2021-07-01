@@ -4,33 +4,48 @@ Component({
    * Component properties
    */
   properties: {
-    // 作者
-    author: {
+    // 酒名
+    name: {
       type: String,
-      value: '作者'
+      value: '玄方'
     },
-    feed_id: {
+    // 酒品id
+    wine_id: {
       type: String,
       value: 0
-    },
-    // 时间
-    time: {
-      type: String,
-      value: '5天前'
     },
     // 标题
     title: {
       type: String,
-      value: '标题'
+      value: ''
     },
-    desc: {
-      type: String,
-      value: '文章预览或者简介'
+    // 图片
+    pics: {
+      type: Array,
+      value: []
     },
-    // 图片远程url
-    pic: {
+    // 原价
+    origin_price: {
       type: String,
-      value: '头图链接'
+      value: ''
+    },
+    // 现价
+    current_price: {
+      type: String,
+      value: ''
+    },
+    descrition: {
+      type: String,
+      value: ''
+    },
+    // 酒品规格
+    volume: {
+      type: Number,
+      value: 0
+    },
+    count: {
+      type: Number,
+      value: 0
     }
   },
 
@@ -48,6 +63,11 @@ Component({
     momentRead: function(event) {
       const feedId = event.currentTarget.dataset.feedId;
       console.log(event.currentTarget.dataset)
+    },
+    go2detail () {
+      wx.redirectTo({
+        url: 'pages/detail/index',
+      })
     }
   }
 })

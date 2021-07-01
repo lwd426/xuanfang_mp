@@ -1,0 +1,52 @@
+/* components/avatar.wxss */
+
+.avatar-wrapper {
+  position: fixed;
+  top: 0rpx;
+  left: 20rpx;
+  width: 100%;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 50%;
+  position: relative;
+}
+
+
+.user-name {
+  position: fixed;
+  color: #000000c2;
+  top: 12rpx;
+  left: 152rpx;
+}
+
+.vip-logo-warpper {
+  position: fixed;
+  color: #000000c2;
+  top: 66rpx;
+  font-size: 24rpx;
+  left: 122rpx;
+  height: 32rpx;
+}
+
+.vip-logo {
+  left: 119rpx;
+  top: -10rpx;
+  width: 32rpx;
+  height: 32rpx;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.vip-text {
+  height: 32rpx;
+  background: #d6204b;
+  border: 1rpx solid #d6204b;
+  padding: 2rpx;
+  color: #ffffff;
+  border-radius: 7rpx;
+}
+

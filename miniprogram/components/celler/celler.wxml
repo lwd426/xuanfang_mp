@@ -1,0 +1,25 @@
+<!--components/celler/celler.wxml-->
+<view class="home-container">
+  <scroll-view class="scroll-view" scroll-y="true" style="width:100%;height: 100%;">
+    <view class="feed-list">
+      <view
+        class="feed-item"
+        wx:key="id"
+        wx:for="{{feedList}}">
+        <feed
+          bindtap="onFeedItemTap"
+          data-feed-id="{{item.id}}"
+          wine_id="{{item.id}}"
+          name="{{item.name}}"
+          title="{{item.title}}"
+          pics="{{item.pics}}"
+          origin_price="{{item.origin_price}}"
+          current_price="{{item.current_price}}"
+          descrition="{{item.descrition}}"
+          volume="{{item.volume}}"
+          count="{{item.count}}"
+          ></feed>
+      </view>
+    </view>
+  </scroll-view>
+</view>

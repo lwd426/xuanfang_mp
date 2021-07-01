@@ -1,0 +1,13 @@
+/* components/celler/celler.wxss */
+.home-container {
+  width: 100%;
+  height: 100%;
+}
+
+.feed-list {
+  padding-bottom: 100rpx;
+  width: 100%;
+}
+.swiper {
+  height: 100vh;
+}

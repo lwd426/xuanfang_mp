@@ -1,11 +1,9 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
+  <view class="basic-info-block">
+    <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}" class="userinfo-opendata">
+      <avatar></avatar>
     </block>
     <block wx:elif="{{!hasUserInfo}}">
       <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
@@ -17,7 +15,30 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <!-- vip卡区域 -->
+  <view class="vip-block">
+    <view class="card">
+      <image mode="aspectFill" class="pic" src="http://pic.xuanfang.club/vip10.png"/>
+    </view>
+    <view class="card-text">
+      <view class="vip-wine">
+        <text class="title">酒窖</text>
+        <text class="count">10瓶</text>
+        <!-- <button class="weui-btn go2wine" type="default">意见反馈</button> -->
+      </view>
+      <view class="vip-go-left"></view>
+      <view class="vip-go" bindtap="go2xuanfang">
+        <image mode="aspectFill" src="http://pic.xuanfang.club/winehome.png"/>
+        <text class="vip-go-text">玄方酒窖</text>
+        <image mode="aspectFill" class="arrow-right" src="http://pic.xuanfang.club/arrow-right.png"/>
+      </view>
+    </view>
+  </view>
+  </view>
+  
+  <!-- 我的酒窖区 -->
+  <view class="celler-block">
+    <text>我的酒窖</text>
+    <celler></celler>
   </view>
 </view>

@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container" style="padding: 0rpx;">
+  <!-- 头图区 -->
+  <image mode="scaleToFill" class="wine-pic" src="http://pic.xuanfang.club/vip10.png"/>
+  <!-- 酒窖区 -->
+  <view class="content-block">
+    <scroll-view class="scroll-view" scroll-y="true" style="width:100%;height: 100%;">
+      <view class="name">青花椒风味扳机套餐</view>
+      <view class="desc">我是的水电费水电费大是大非是的水电费懂法守法顺丰到付是范德萨发师德师风都是方式我</view>
+    </scroll-view>
+  </view>
+  <view class="opt-block">
+    <button class="add-button" type="default" role="button" bindtap="go2detail" plain="true">加入</button>
+  </view>
+</view>

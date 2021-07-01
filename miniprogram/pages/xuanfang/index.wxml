@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 头图区 -->
+  <!-- 酒窖区 -->
+  <view class="celler-block">
+    <celler></celler>
+  </view>
+</view>
