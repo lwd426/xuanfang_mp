@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "玄方酒窖",
   "usingComponents": {
-    "celler": "/components/celler/celler"
+    "cellerxf": "/components/cellerxf/celler"
   }
 }

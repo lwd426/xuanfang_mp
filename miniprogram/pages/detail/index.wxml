@@ -5,8 +5,8 @@
   <!-- 酒窖区 -->
   <view class="content-block">
     <scroll-view class="scroll-view" scroll-y="true" style="width:100%;height: 100%;">
-      <view class="name">玄方经典</view>
-      <!-- <view class="desc">我是的水电费水电费大是大非是的水电费懂法守法顺丰到付是范德萨发师德师风都是方式我</view> -->
+      <view class="name">{{name}}</view>
+      <view class="title">{{title}}</view>
       <image mode="widthFix" class="detail-pic" src="http://pic.xuanfang.club/xuanfang1-1-min.png"></image>
       <image mode="widthFix" class="detail-pic" src="http://pic.xuanfang.club/xuanfang1-2-min.png"></image>
       <image mode="widthFix" class="detail-pic" src="http://pic.xuanfang.club/xuanfang1-3-min.png"></image>
@@ -15,10 +15,10 @@
   </view>
   <view class="opt-block">
     <view class="num-opt">
-      <image class="del-icon" src="http://pic.xuanfang.club/add-icon.png" bindtap="go2detail"></image>
-      <text>1</text>
-      <image class="add-icon" src="http://pic.xuanfang.club/del-icon.png" bindtap="go2detail"></image>
+      <button class="mini-btn detail-btn" disabled="{{!canAdd}}" type="primary" size="mini"  bindtap="add">+</button>
+      <text>{{addNum}}</text>
+      <button class="mini-btn detail-btn" type="primary" disabled="{{!canSlice}}" size="mini" bindtap="slice">-</button>
     </view>
-    <button class="add-button" type="default" role="button" bindtap="go2detail" plain="true">加入</button>
+    <button class="add-button" type="default" role="button" bindtap="buy" plain="true">加入</button>
   </view>
 </view>

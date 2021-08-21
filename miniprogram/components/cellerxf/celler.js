@@ -8,10 +8,10 @@ Component({
     consumerUnionid: { // 属性名
       type: String,
       value: '',
-      observer: function(newVal, oldVal) {
-        // 属性值变化时执行
-        if (newVal !== oldVal) this.init()
-      }
+      // observer: function(newVal, oldVal) {
+      //   // 属性值变化时执行
+      //   if (newVal !== oldVal) this.init()
+      // }
     }
   },
   
@@ -23,7 +23,7 @@ Component({
     wineCount: 0
   },
   attached: function (options) {
-    // this.setData({loading:true});
+    this.init()
   },
 
   /**
@@ -32,14 +32,11 @@ Component({
   methods: {
     init () {
       wx.request({
-        url: URLS.get_celler,
-        data: {
-          unionId: this.properties.consumerUnionid  
-        },
+        url: URLS.get_wine_list,
         header: {
           'content-type': 'application/json'
         },
-        method: 'POST',
+        method: 'GET',
         success: res => {
           console.log(res)
           // this.setData({loading:false});
@@ -50,7 +47,7 @@ Component({
               return
             }
             let wineCount = 0;           
-            let feedList = res.data.data && res.data.data.length && res.data.data.map( item => {
+            let feedList = res.data && res.data.length && res.data.map( item => {
               wineCount = wineCount + item.wine_count
               return {
                 id: item.id,
@@ -61,16 +58,11 @@ Component({
                 current_price: item.current_price,
                 descrition: item.descrition,
                 volume: item.volume,
-                userId: item.user_id || '',
-                count: item.wine_count,
+                count: item.count,
               }
             })
-            
             this.setData({feedList,wineCount});
-            this.triggerEvent('parentEvent', {
-              wineCount,
-              wineUngiftCount: res.data.ungift || 0 // 未被领取的酒品信息
-            })
+            // this.triggerEvent('parentEvent', wineCount)
           } catch (e) {
             console.log(e)
             this.setData({feedList: []});

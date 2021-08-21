@@ -18,11 +18,6 @@ Component({
       type: String,
       value: 0
     },
-    // 酒品id
-    userId: {
-      type: String,
-      value: 0
-    },
     // 标题
     title: {
       type: String,

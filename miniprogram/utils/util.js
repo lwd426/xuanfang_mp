@@ -1,31 +1,30 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.musicList = exports.parsemarkContent = exports.formatTime = void 0;
-exports.formatTime = function (date) {
-    var year = date.getFullYear();
-    var month = date.getMonth() + 1;
-    var day = date.getDate();
-    var hour = date.getHours();
-    var minute = date.getMinutes();
-    var second = date.getSeconds();
-    return ([year, month, day].map(formatNumber).join("/") +
-        " " +
-        [hour, minute, second].map(formatNumber).join(":"));
-};
-var formatNumber = function (n) {
-    var s = n.toString();
-    return s[1] ? s : "0" + s;
-};
-exports.parsemarkContent = function (markContent) {
-    return markContent.replace(/---.*---/g, "");
-};
-exports.musicList = [
-    "https://m801.music.126.net/20201224150946/549b52c81049d9c1df4ba59e4e7ffcf7/jdyyaac/0608/520b/0453/1b893331daea835075583908621dc556.m4a",
-    "https://m701.music.126.net/20201224151616/6509a2b49e0604b5b402962167032996/jdyyaac/005e/535e/555c/74a61b157ad4e618c628b6fea79995c0.m4a",
-    "https://m10.music.126.net/20201224151632/ae325195acc1df7091ac2e67c3ad7f7b/yyaac/obj/wonDkMOGw6XDiTHCmMOi/1983907322/d9ce/5d8b/eb2b/9eab0e928c68d3ab6bab3d42323bb336.m4a",
-    "https://m801.music.126.net/20201224151640/effcb32c4bd0c89c2060536d01f55a0f/jdyyaac/0709/5209/000c/0c134aeadcec18f9700c7ffccc16def4.m4a",
-    "https://m701.music.126.net/20201224151700/24556303b14cffc4c4e5848afa38fb70/jdyyaac/015e/025c/000e/64dc15fd3856cb22f95d7d86e8a945ae.m4a",
-    "https://m801.music.126.net/20201224151709/70b34478d0deca126959b55f49f25778/jdyyaac/0608/520b/0453/1b893331daea835075583908621dc556.m4a",
-    "https://m701.music.126.net/20201224151719/f46e0480bf64b60fc97b13013695c1ca/jdyyaac/0709/5209/000c/0c134aeadcec18f9700c7ffccc16def4.m4a",
-];
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXRpbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbInV0aWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQWEsUUFBQSxVQUFVLEdBQUcsVUFBQyxJQUFVO0lBQ25DLElBQU0sSUFBSSxHQUFHLElBQUksQ0FBQyxXQUFXLEVBQUUsQ0FBQztJQUNoQyxJQUFNLEtBQUssR0FBRyxJQUFJLENBQUMsUUFBUSxFQUFFLEdBQUcsQ0FBQyxDQUFDO0lBQ2xDLElBQU0sR0FBRyxHQUFHLElBQUksQ0FBQyxPQUFPLEVBQUUsQ0FBQztJQUMzQixJQUFNLElBQUksR0FBRyxJQUFJLENBQUMsUUFBUSxFQUFFLENBQUM7SUFDN0IsSUFBTSxNQUFNLEdBQUcsSUFBSSxDQUFDLFVBQVUsRUFBRSxDQUFDO0lBQ2pDLElBQU0sTUFBTSxHQUFHLElBQUksQ0FBQyxVQUFVLEVBQUUsQ0FBQztJQUVqQyxPQUFPLENBQ0wsQ0FBQyxJQUFJLEVBQUUsS0FBSyxFQUFFLEdBQUcsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxZQUFZLENBQUMsQ0FBQyxJQUFJLENBQUMsR0FBRyxDQUFDO1FBQzlDLEdBQUc7UUFDSCxDQUFDLElBQUksRUFBRSxNQUFNLEVBQUUsTUFBTSxDQUFDLENBQUMsR0FBRyxDQUFDLFlBQVksQ0FBQyxDQUFDLElBQUksQ0FBQyxHQUFHLENBQUMsQ0FDbkQsQ0FBQztBQUNKLENBQUMsQ0FBQztBQUVGLElBQU0sWUFBWSxHQUFHLFVBQUMsQ0FBUztJQUM3QixJQUFNLENBQUMsR0FBRyxDQUFDLENBQUMsUUFBUSxFQUFFLENBQUM7SUFDdkIsT0FBTyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsR0FBRyxHQUFHLENBQUMsQ0FBQztBQUM1QixDQUFDLENBQUM7QUFFVyxRQUFBLGdCQUFnQixHQUFHLFVBQUMsV0FBbUI7SUFDbEQsT0FBTyxXQUFXLENBQUMsT0FBTyxDQUFDLFdBQVcsRUFBRSxFQUFFLENBQUMsQ0FBQztBQUM5QyxDQUFDLENBQUM7QUFFVyxRQUFBLFNBQVMsR0FBRztJQUN2Qix3SUFBd0k7SUFDeEksd0lBQXdJO0lBQ3hJLHlLQUF5SztJQUN6Syx3SUFBd0k7SUFDeEksd0lBQXdJO0lBQ3hJLHdJQUF3STtJQUN4SSx3SUFBd0k7Q0FDekksQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCBmb3JtYXRUaW1lID0gKGRhdGU6IERhdGUpID0+IHtcbiAgY29uc3QgeWVhciA9IGRhdGUuZ2V0RnVsbFllYXIoKTtcbiAgY29uc3QgbW9udGggPSBkYXRlLmdldE1vbnRoKCkgKyAxO1xuICBjb25zdCBkYXkgPSBkYXRlLmdldERhdGUoKTtcbiAgY29uc3QgaG91ciA9IGRhdGUuZ2V0SG91cnMoKTtcbiAgY29uc3QgbWludXRlID0gZGF0ZS5nZXRNaW51dGVzKCk7XG4gIGNvbnN0IHNlY29uZCA9IGRhdGUuZ2V0U2Vjb25kcygpO1xuXG4gIHJldHVybiAoXG4gICAgW3llYXIsIG1vbnRoLCBkYXldLm1hcChmb3JtYXROdW1iZXIpLmpvaW4oXCIvXCIpICtcbiAgICBcIiBcIiArXG4gICAgW2hvdXIsIG1pbnV0ZSwgc2Vjb25kXS5tYXAoZm9ybWF0TnVtYmVyKS5qb2luKFwiOlwiKVxuICApO1xufTtcblxuY29uc3QgZm9ybWF0TnVtYmVyID0gKG46IG51bWJlcikgPT4ge1xuICBjb25zdCBzID0gbi50b1N0cmluZygpO1xuICByZXR1cm4gc1sxXSA/IHMgOiBcIjBcIiArIHM7XG59O1xuXG5leHBvcnQgY29uc3QgcGFyc2VtYXJrQ29udGVudCA9IChtYXJrQ29udGVudDogc3RyaW5nKTogc3RyaW5nID0+IHtcbiAgcmV0dXJuIG1hcmtDb250ZW50LnJlcGxhY2UoLy0tLS4qLS0tL2csIFwiXCIpO1xufTtcblxuZXhwb3J0IGNvbnN0IG11c2ljTGlzdCA9IFtcbiAgXCJodHRwczovL204MDEubXVzaWMuMTI2Lm5ldC8yMDIwMTIyNDE1MDk0Ni81NDliNTJjODEwNDlkOWMxZGY0YmE1OWU0ZTdmZmNmNy9qZHl5YWFjLzA2MDgvNTIwYi8wNDUzLzFiODkzMzMxZGFlYTgzNTA3NTU4MzkwODYyMWRjNTU2Lm00YVwiLFxuICBcImh0dHBzOi8vbTcwMS5tdXNpYy4xMjYubmV0LzIwMjAxMjI0MTUxNjE2LzY1MDlhMmI0OWUwNjA0YjViNDAyOTYyMTY3MDMyOTk2L2pkeXlhYWMvMDA1ZS81MzVlLzU1NWMvNzRhNjFiMTU3YWQ0ZTYxOGM2MjhiNmZlYTc5OTk1YzAubTRhXCIsXG4gIFwiaHR0cHM6Ly9tMTAubXVzaWMuMTI2Lm5ldC8yMDIwMTIyNDE1MTYzMi9hZTMyNTE5NWFjYzFkZjcwOTFhYzJlNjdjM2FkN2Y3Yi95eWFhYy9vYmovd29uRGtNT0d3NlhEaVRIQ21NT2kvMTk4MzkwNzMyMi9kOWNlLzVkOGIvZWIyYi85ZWFiMGU5MjhjNjhkM2FiNmJhYjNkNDIzMjNiYjMzNi5tNGFcIixcbiAgXCJodHRwczovL204MDEubXVzaWMuMTI2Lm5ldC8yMDIwMTIyNDE1MTY0MC9lZmZjYjMyYzRiZDBjODljMjA2MDUzNmQwMWY1NWEwZi9qZHl5YWFjLzA3MDkvNTIwOS8wMDBjLzBjMTM0YWVhZGNlYzE4Zjk3MDBjN2ZmY2NjMTZkZWY0Lm00YVwiLFxuICBcImh0dHBzOi8vbTcwMS5tdXNpYy4xMjYubmV0LzIwMjAxMjI0MTUxNzAwLzI0NTU2MzAzYjE0Y2ZmYzRjNGU1ODQ4YWZhMzhmYjcwL2pkeXlhYWMvMDE1ZS8wMjVjLzAwMGUvNjRkYzE1ZmQzODU2Y2IyMmY5NWQ3ZDg2ZThhOTQ1YWUubTRhXCIsXG4gIFwiaHR0cHM6Ly9tODAxLm11c2ljLjEyNi5uZXQvMjAyMDEyMjQxNTE3MDkvNzBiMzQ0NzhkMGRlY2ExMjY5NTliNTVmNDlmMjU3NzgvamR5eWFhYy8wNjA4LzUyMGIvMDQ1My8xYjg5MzMzMWRhZWE4MzUwNzU1ODM5MDg2MjFkYzU1Ni5tNGFcIixcbiAgXCJodHRwczovL203MDEubXVzaWMuMTI2Lm5ldC8yMDIwMTIyNDE1MTcxOS9mNDZlMDQ4MGJmNjRiNjBmYzk3YjEzMDEzNjk1YzFjYS9qZHl5YWFjLzA3MDkvNTIwOS8wMDBjLzBjMTM0YWVhZGNlYzE4Zjk3MDBjN2ZmY2NjMTZkZWY0Lm00YVwiLFxuXTtcbiJdfQ==
+import URLS from './urls'
+module.exports = {
+    login (callback) {
+        const unionId = wx.getStorageSync('openId')
+        if (unionId) {
+            return callback(unionId, wx.getStorageSync('userExsit'))
+        }
+        wx.login({
+            success: res => {
+              // 发送 res.code 到后台换取 openId, sessionKey, unionId
+                wx.request({
+                    url: `${URLS.get_authorization_code}`,
+                    data: {
+                        js_code:res.code, //临时登录凭证
+                    },
+                    header: {
+                    'content-type': 'application/json'
+                    },
+                    method: 'POST',
+                    success: function(res) {
+                        var data = res.data.data //返回openid
+                        wx.setStorageSync('openId', data.openId)
+                        wx.setStorageSync('userExsit', data.exsit)
+                        callback(data.openId, data.exsit)
+                    }
+                })
+            }
+        })
+    }
+}

@@ -1,8 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- 头图区 -->
-  <!-- 酒窖区 -->
   <view class="celler-block">
-    <celler></celler>
+    <text>玄方官方酒窖</text>
+    <cellerxf></cellerxf>
   </view>
 </view>

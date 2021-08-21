@@ -6,13 +6,10 @@
         class="feed-item"
         wx:key="id"
         wx:for="{{feedList}}">
-        <feed
+        <wine
           bindtap="onWineItemTap"
-          wineId="{{item.id}}"
-          data-wine-id="{{item.id}}"
           data-celler-id="{{item.id}}"
-          userId="{{item.userId}}"
-          cellerId="{{item.id}}"
+          data-wine-id="{{item.id}}"
           name="{{item.name}}"
           title="{{item.title}}"
           pics="{{item.pics}}"
@@ -21,7 +18,7 @@
           descrition="{{item.descrition}}"
           volume="{{item.volume}}"
           count="{{item.count}}"
-          ></feed>
+          ></wine>
       </view>
     </view>
   </scroll-view>

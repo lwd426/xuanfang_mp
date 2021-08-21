@@ -61,10 +61,23 @@
 
 /* vip区域酒窖区 */
 .vip-wine {
-  width: 50%;
+  width: 20%;
   display: inline-block;
   height: 150rpx;
   margin: 24rpx 32rpx;
+}
+
+.recycle {
+  position: absolute;
+  float: right;
+  width: 110rpx !important;
+  display: inline !important;
+  font-size: 24rpx !important;
+  border-radius: 36rpx !important;
+  padding: 10rpx 24rpx !important;
+  margin-left: 10rpx !important;
+  background: #ffbc00 !important;
+  border: none !important;
 }
 
 .vip-wine .title {
@@ -79,7 +92,7 @@
 }
 
 .vip-go {
-  width: 248rpx;
+  width: 214rpx;
   height: 108rpx;
   display: flex;
   background: #ffb100;
@@ -96,15 +109,15 @@
   display: inline-block;
   background: #ffb100;
   position: fixed;
-  right: 202rpx;
+  right: 176rpx;
   top: 302rpx;
 }
 
 .vip-go-text {
-  margin-left: 20rpx;
-  font-size: 32rpx;
-  font-weight: bold;
-  color: #ffffff;
+  margin-left: 16rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 .vip-go image {
@@ -117,11 +130,11 @@
 }
 
 .vip-go .arrow-right {
-  width: 44rpx;
-    height: 44rpx;
-    line-height: 44rpx;
+  width: 38rpx;
+    height: 38rpx;
+    line-height: 36rpx;
     margin-top: 36rpx;
-    margin-left: 18rpx;
+    margin-left: 2rpx;
 }
 
 .card-text {

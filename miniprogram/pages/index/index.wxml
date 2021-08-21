@@ -22,9 +22,14 @@
     </view>
     <view class="card-text">
       <view class="vip-wine">
-        <text class="title">酒窖</text>
-        <text class="count">10瓶</text>
+        <text class="title">我的酒窖</text>
+        <text class="count">{{wineCount}} 瓶</text>
         <!-- <button class="weui-btn go2wine" type="default">意见反馈</button> -->
+      </view>
+      <view class="vip-wine" wx:if="{{wineUngiftCount}}">
+        <text class="title">未被领取</text>
+        <text class="count">{{wineUngiftCount}} 瓶</text>
+        <button class="button recycle" type="default" role="button" plain="true" bindtap="onRecycle">回收</button>
       </view>
       <view class="vip-go-left"></view>
       <view class="vip-go" bindtap="go2xuanfang">
@@ -39,6 +44,6 @@
   <!-- 我的酒窖区 -->
   <view class="celler-block">
     <text>我的酒窖</text>
-    <celler></celler>
+    <celler id="myceller" consumer-unionid="{{consumerId}}" bind:parentEvent="cellerUpdate" celler-info="{{cellerInfo}}"></celler>
   </view>
 </view>

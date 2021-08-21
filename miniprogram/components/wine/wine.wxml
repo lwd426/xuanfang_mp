@@ -10,19 +10,9 @@
       </view>
       <text class="time">原价：￥{{origin_price}}</text>
     </view>
-    <view class="opt" wx:if="{{show === 'share'}}">
-      <view class="count">库存：{{count}}瓶</view>
-      <view class="num-opt">
-        <button class=" gift" disabled="{{!canAdd}}" type="primary" size="mini"  catchtap="add">+</button>
-        <view>{{addNum}}</view>
-        <button class=" gift" type="primary" disabled="{{!canSlice}}" size="mini" catchtap="slice">-</button>
-      </view>
-      <button class="button" data-pic="{{'http://pic.xuanfang.club/nowine.png'}}" data-userid="{{userId}}" data-wineid="{{wineId}}" data-count="{{addNum}}" open-type="share" disabled="{{addNum === 0}}" type="default" role="button" plain="true" catchtap="gift">送礼</button>
-    </view>
-    <view class="opt" wx:else>
+    <view class="opt">
       <view class="count">库存：{{count}}瓶</view>
       <button class=" button" type="default" role="button" plain="true">加仓</button>
-      <button class=" button" type="default" role="button" plain="true" catchtap="gift">送礼</button>
     </view>
   </view>
 </view>
